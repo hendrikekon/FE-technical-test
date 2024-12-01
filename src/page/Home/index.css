@@ -1,0 +1,78 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+}
+.hero-container {
+    background-image: url('https://interiordesign.id/wp-content/uploads/2019/02/2-min-6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-title{
+    color: #900850;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+.product-page {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* .product-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+} */
+
+
+
+/* -------------------------------------------------------- */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 50px;
+    display: inline-grid;
+    overflow: hidden;
+  }
+  .loader:before,
+  .loader:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    clip-path: inset(0 -200% 50%);
+    text-shadow: -10ch 0 0;
+    animation: l12 1s infinite;
+  }
+  .loader:after {
+    clip-path: inset(50% -200% 0%);
+    text-shadow: 10ch 0 0;
+    --s:-1;
+  }
+  @keyframes l12 {50%,100%{transform: translateX(calc(var(--s,1)*100%));}}

@@ -1,0 +1,17 @@
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.link-category{
+    border-radius: 5px;
+}

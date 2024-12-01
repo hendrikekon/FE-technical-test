@@ -1,0 +1,231 @@
+.account-container {
+    position: relative;
+}
+
+.account-head {
+    display: flex;
+    align-items: center;
+}
+
+.btn-account {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.img-account {
+    height: 25px;
+    width: auto;
+}
+
+.account-list {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+    padding: 10px;
+    opacity: 1;
+    /* visibility: hidden; */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.account-list.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.account-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-list li {
+    margin: 10px 0;
+}
+
+.account-list .account-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-list .account-footer a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 12px;
+}
+.account-profile{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    flex-wrap: wrap;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+}
+/* .account-profile :hover{
+    background-color: #c7c7c7;
+    transition: background-color 0.3s ease;
+} */
+.account-name{
+    justify-content: flex-start;
+    font-size: 14;
+    overflow: hidden;
+    color: #3f3f3f;
+    margin: 0;
+    white-space: nowrap;
+}
+.account-email{
+    justify-content: flex-start;
+    font-size: 14;
+    color: #777777;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.horizontal-line {
+    width: 100%;
+    border-bottom: 2px solid rgb(71, 71, 71);
+    margin: 20px 0;
+}
+
+.account-account{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+
+.account-address{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+.account-order{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+.account-feedback{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+.account-about{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+.account-logout{
+    text-align: start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+}
+
+.account-account:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+.account-address:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+.account-order:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+.account-feedback:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+.account-about:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+.account-logout:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+    transition: background-color 0.5s ease;
+}
+
+
+/* --overlay-- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirm-button, .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.confirm-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+}
