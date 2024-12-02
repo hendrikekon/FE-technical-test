@@ -9,7 +9,7 @@ const Orderlist = () => {
         const fetchOrder = async() => {
             try {
                 const response = await getOrders();
-                console.log(response.data);
+                // console.log(response.data);
                 setOrders(response.data.data);
             } catch (error) {
                 console.log(error);

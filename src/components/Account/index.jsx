@@ -56,7 +56,9 @@ const handleOrderClick = () => {
     navigate('/order')
 }
 
-
+const handleAccountDetailClick = () => {
+    navigate('/accountdetail')
+}
 
 
     return(
@@ -76,7 +78,7 @@ const handleOrderClick = () => {
                         </button>
                         </li>
                         <div className="horizontal-line"></div>
-                        <li><button onClick={handleOrderClick} className="account-account">Account</button></li>
+                        <li><button onClick={handleAccountDetailClick} className="account-account">Account</button></li>
                         <li><button onClick={handleOrderClick} className="account-order">Order List</button></li>
                         <li><button className="account-feedback">Give feedback</button></li>
                         <li><button className="account-about">About</button></li>

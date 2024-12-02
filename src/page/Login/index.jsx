@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./index.css";
@@ -14,6 +14,9 @@ const LoginForm = ({setIsLoggedIn}) => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState(false);
+
+    const confirmError = () => setErrorMessage(false);
 
     const onSubmit = async (data) => {
         try {
@@ -21,12 +24,21 @@ const LoginForm = ({setIsLoggedIn}) => {
         setIsLoggedIn(true);
         navigate('/');
         } catch (error) {
-        console.error("Login Failed", error);
+            setErrorMessage(true);
+            console.error("Login Failed", error);
         }
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="login-form">
+            {errorMessage && (
+                <div className="modal-overlay">
+                    <div className="modal">
+                        <p>Email atau Password Salah. Silahkan Coba Lagi.</p>
+                        <button onClick={confirmError} className="cancel-button">Coba Lagi</button>
+                    </div>
+                </div>
+            )}
             <h2 className="Login">Login</h2>
             <div className="form-group">
                 <label htmlFor="us_email">Email:</label>
