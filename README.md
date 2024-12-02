@@ -1,3 +1,9 @@
+### .env example:
+REACT_APP_API_BASE_URL=http://localhost:3000 \
+REACT_APP_SECRET_KEY= \
+REACT_APP_SERVICE_NAME= \
+PORT=3002
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
